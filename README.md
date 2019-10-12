@@ -139,7 +139,7 @@ Each operation is an object implemented with paos.service/Service methods which 
 
 (require '[paos.service :as service])
 
-(let [srv (get-in soap-service ["SomeServiceBinding" :operations "operation1"]]
+(let [srv (get-in soap-service ["SomeServiceBinding" :operations "operation1"])]
       (service/request-mapping srv))
   ;; => {"Envelope" {"Headers" []
   ;;                 "Body" {"SomeWrapper" {"Value" {:__value {:__type "string"}}}}}}
